@@ -2,20 +2,21 @@
 --oxford-blue: #14213dff;
 --orange-web: #fca311ff;
 --platinum: #e5e5e5ff;
---white: #ffffffff; */
-
+--white: #ffffffff */
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
-
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: "EB Garamond", serif;
   margin: 0;
+  font-family: "EB Garamond", serif;
 }
 abbr {
   text-decoration: none;
   font-style: italic;
+}
+.bold {
+  font-weight: bold;
 }
 address {
   display: inline-block;
@@ -27,77 +28,82 @@ dt {
 dd {
   display: inline-block;
 }
-.bold {
-  font-weight: bold;
-}
 .author {
-  color: rgb(31, 104, 206);
+  color: rgb(24, 29, 170);
   text-decoration: underline;
 }
+
 div#header {
   background-color: #14213dff;
   min-height: 250px;
   line-height: 250px;
 }
+
 .sistema-solare_title {
   text-align: center;
+
   margin: 0;
   font-size: 40px;
-
   text-transform: capitalize;
 }
 .sistema-solare_title--principale {
-  text-shadow: 2px 2px 2px #e5e5e5ff;
+  text-shadow: 2px 2px #e5e5e5ff;
   word-spacing: 3px;
   text-transform: uppercase;
   font-size: 60px;
   color: #fca311ff;
 }
-#main {
+
+div#main {
   padding: 20px 20px 0;
   background-color: #e5e5e5ff;
-  margin-bottom: ;
 }
-.sistema-solare {
+
+div.sistema-solare {
   background-color: #fca311ff;
   padding: 20px;
-  border: 3px solid #000000ff;
+  border: 3px solid #14213dff;
 }
-.sistema-solare__body {
+
+.sistema-solare_body {
   font-size: 19px;
   line-height: 1.15;
 }
-li {
-  list-style-image: url("../../assets/img/icons8-planet-8.png");
+.sistema-solare_body li {
+  list-style-image: url(../../assets/img/icons8-planet-8.png);
 }
+.pianeta-container {
+  margin: 20px 0 0;
+  font-size: 0;
+}
+
 .pianeta-card {
   width: calc(33.333333% - 20px);
-  border: 2px solid #000000;
+  border: 2px solid black;
   padding: 20px 0;
   display: inline-block;
   font-size: 16px;
   margin: 0 10px 20px;
 }
+
 .pianeta-card_head {
   border-bottom: 2px ridge black;
   padding-bottom: 20px;
   margin: 0;
 }
-.pianeta-container {
-  margin: 0;
-  margin: 20px 0 0;
-  font-size: 0;
-}
+
 .pianeta-card h2 {
   text-align: center;
   margin: 0;
 }
 .pianeta-card_body {
-  padding: 20px 20px;
+  padding: 20px;
 }
+
 .pianeta-card_body p {
   margin: 0;
 }
+
 .pianeta-card_footer {
   color: #14213dff;
   text-align: center;
@@ -106,15 +112,15 @@ li {
   font-size: 20px;
   cursor: pointer;
 }
-.pianeta-card--boundary-left {
+.pianeta__card--boundary-left {
   margin-left: 0;
   width: calc(33.333333% - 10px);
 }
-.pianeta-card--boundary-right {
+.pianeta__card--boundary-right {
   margin-right: 0;
   width: calc(33.333333% - 10px);
 }
-div#footer {
+#footer {
   background-color: #fca311ff;
-  padding: 50px;
+  padding: 30px;
 }
