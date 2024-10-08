@@ -11,6 +11,9 @@ body {
   margin: 0;
   font-family: "EB Garamond", serif;
 }
+html {
+  font-size: 22px;
+}
 abbr {
   text-decoration: none;
   font-style: italic;
@@ -23,7 +26,7 @@ address {
 }
 dt {
   display: inline-block;
-  min-width: 150px;
+  min-width: 9.375rem;
 }
 dd {
   display: inline-block;
@@ -34,8 +37,15 @@ dd {
 }
 
 div#header {
-  background-color: #14213dff;
   min-height: 250px;
+  background-image: radial-gradient(
+    circle 100px,
+    rgb(220, 220, 26, 0.349),
+    rgb(220, 220, 26) 70px,
+    rgb(112, 112, 11) 80px,
+    #14213dff
+  );
+
   line-height: 250px;
 }
 
@@ -43,14 +53,14 @@ div#header {
   text-align: center;
 
   margin: 0;
-  font-size: 40px;
+  font-size: 2.5rem;
   text-transform: capitalize;
 }
 .sistema-solare_title--principale {
   text-shadow: 2px 2px #e5e5e5ff;
   word-spacing: 3px;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 60px 3.75rem;
   color: #fca311ff;
 }
 
@@ -66,7 +76,7 @@ div.sistema-solare {
 }
 
 .sistema-solare_body {
-  font-size: 19px;
+  font-size: 1.875;
   line-height: 1.15;
 }
 .sistema-solare_body li {
@@ -78,17 +88,24 @@ div.sistema-solare {
 }
 
 .pianeta-card {
-  width: calc(33.333333% - 20px);
+  width: calc(33.333333% - 40px / 3);
   border: 2px solid black;
-  padding: 20px 0;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
   margin: 0 10px 20px;
+  box-shadow: 0 0 1 px 2px #14213dff;
+}
+.pianeta-card:hover .pianeta-card_head {
+  background-color: #14213dff;
+  color: #fca311ff;
+}
+.pianeta-card:hover {
+  cursor: pointer;
 }
 
 .pianeta-card_head {
   border-bottom: 2px ridge black;
-  padding-bottom: 20px;
+  padding: 20px 0;
   margin: 0;
 }
 
@@ -108,17 +125,27 @@ div.sistema-solare {
   color: #14213dff;
   text-align: center;
   border-top: 2px ridge black;
-  padding-top: 20px;
-  font-size: 20px;
+  padding: 20px 0;
+  font-size: 1.25rem;
   cursor: pointer;
 }
-.pianeta__card--boundary-left {
-  margin-left: 0;
-  width: calc(33.333333% - 10px);
+.pianeta-card_footer span {
+  display: block;
+  width: 75%;
+  margin: 0 auto;
+  padding: 5px 0;
 }
-.pianeta__card--boundary-right {
+
+.pianeta-card_footer span:hover {
+  background-color: #14213dff;
+  color: #fca311ff;
+  border-radius: 999px;
+}
+.pianeta-card:nth-of-type(3n + 1) {
+  margin-left: 0;
+}
+.pianeta-card:nth-of-type(3n) {
   margin-right: 0;
-  width: calc(33.333333% - 10px);
 }
 #footer {
   background-color: #fca311ff;
